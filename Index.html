@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Music-WebPage</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+            <img src="Sound webpage_img/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFICATIONS</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONNECT</a></li>
+            </ul>
+            </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br> REAL<br> FEEL</h1>
+            </div>
+            <div class="right-col">
+                <p>Cick Here To Listen </p>
+                <img src="Sound webpage_img/play.png" id="icon">
+            </div>
+        </div>
+        </div>
+      <audio id="mymusic">
+        <source src="Sound webpage_img/Rangi Sari(PagalWorld.com.se).mp3" type="audio/mp3"> </audio>
+      <script>
+        var mymusic = document.getElementById("mymusic");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+          if(mymusic.paused){
+            mymusic.play();
+            icon.src ="Sound webpage_img/pause.png"
+          }
+          else{
+            mymusic.pause();
+            icon.src ="Sound webpage_img/play.png";
+          }
+        }
+        </script>
+    </body> 
+</html>   
